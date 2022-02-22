@@ -3,6 +3,7 @@ import React from 'react';
 
 import About from './components/About/About';
 import Home from './components/Home/Home';
+import Navbar from './components/shared/Navbar/Navbar';
 
 const App: React.FunctionComponent = () => {
   return (
@@ -10,6 +11,7 @@ const App: React.FunctionComponent = () => {
       <GlobalStyle />
       <Home />
       <About />
+      <Navbar />
     </div>
   );
 };
