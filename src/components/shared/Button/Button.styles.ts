@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 export const Cta = styled.a`
   background-color: transparent;
-  border: 0.063rem solid #e3ae4a;
+  border: 0.063rem solid var(--gold);
   border-radius: 0.25rem;
-  color: #e3ae4a;
+  color: var(--gold);
   cursor: pointer;
   display: inline-flex;
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.75rem;
   letter-spacing: 0.1rem;
   outline: 0;
@@ -16,6 +16,6 @@ export const Cta = styled.a`
   text-transform: uppercase;
   transition: all ease-in-out 0.2s;
   :hover {
-    background-color: rgba(227, 174, 74, 0.1);
+    background-color: var(--gold-shadow);
   }
 `;

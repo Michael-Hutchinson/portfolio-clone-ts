@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Name = styled.h5`
-  color: #e3ae4a;
-  font-family: 'Roboto Mono', monospace;
+  color: var(--gold);
+  font-family: var(--font-mono);
   margin: 0 0 0 0.25rem;
   font-size: 0.875rem;
 `;
@@ -14,7 +14,7 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h2`
-  color: #8892b0;
+  color: var(--light-slate);
   font-size: clamp(2.5rem, 6vw, 4rem);
   margin: 0;
 `;

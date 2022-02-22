@@ -23,7 +23,7 @@ export const ListItems = styled.ul`
     font-family: var(--font-mono);
     font-size: 0.813rem;
     &:before {
-      color: #e3ae4a;
+      color: var(--gold);
       content: '▹';
       left: 0;
       position: absolute;
@@ -33,7 +33,7 @@ export const ListItems = styled.ul`
 
 export const Logo = styled.img`
   width: 100%;
-  border: 0.063rem solid #e3ae4a;
+  border: 0.063rem solid var(--gold);
   border-radius: 0.25rem;
   padding: 0.313rem;
 `;
