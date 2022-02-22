@@ -4,7 +4,7 @@ import React from 'react';
 import About from './components/About/About';
 import Home from './components/Home/Home';
 
-function App() {
+const App: React.FunctionComponent = () => {
   return (
     <div className="App">
       <GlobalStyle />
@@ -12,6 +12,6 @@ function App() {
       <About />
     </div>
   );
-}
+};
 
 export default App;
