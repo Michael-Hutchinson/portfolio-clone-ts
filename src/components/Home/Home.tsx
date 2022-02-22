@@ -1,6 +1,6 @@
-import Button from 'components/shared/Button/Button';
 import React from 'react';
 
+import Button from '../shared/Button/Button';
 import { Name, SubTitle, Text, Title } from './Home.styles';
 
 const Home: React.FunctionComponent = () => {
