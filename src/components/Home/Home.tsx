@@ -5,7 +5,7 @@ import { Name, SubTitle, Text, Title } from './Home.styles';
 
 const Home: React.FunctionComponent = () => {
   return (
-    <section>
+    <section id="home">
       <Name>Hi, my name is</Name>
       <Title>Michael Hutchinson.</Title>
       <SubTitle>I like to code things for the web.</SubTitle>
