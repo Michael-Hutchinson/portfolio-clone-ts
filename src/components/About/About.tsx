@@ -1,12 +1,13 @@
 import React from 'react';
 
 import logo from '../../images/me.png';
+import Title from '../shared/Title/Title';
 import { ListItems, Logo, Wrap } from './About.styles';
 
 const About: React.FunctionComponent = () => {
   return (
     <section id="about">
-      <h2>A little more about me</h2>
+      <Title titleText="A little more about me" />
       <Wrap>
         <div>
           <p>
