@@ -5,14 +5,15 @@ import { Contact, Fields, InputFields, MessageBox, SendButton } from './Form.sty
 
 const Form: React.FunctionComponent = () => {
   const [sent, setSent] = useState<boolean>();
-  const sendEmail = (e: any) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    const target = e.target as HTMLFormElement;
     e.preventDefault();
 
     emailjs
       .sendForm(
         'service_8vvwcw6',
         'template_tjcmx0d',
-        e.target,
+        target,
         'user_sT5IC7cV94BXANfidUr3y',
       )
       .then(
@@ -23,7 +24,7 @@ const Form: React.FunctionComponent = () => {
           setSent(false);
         },
       );
-    e.target.reset();
+    target.reset();
   };
 
   let successMessage = '';
