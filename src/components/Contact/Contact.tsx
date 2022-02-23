@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Form from '../../components/shared/Form/Form';
 import Title from '../shared/Title/Title';
 
 const Contact: React.FunctionComponent = () => {
@@ -9,6 +10,7 @@ const Contact: React.FunctionComponent = () => {
       <h3>
         If you have any questions or want to know more, please use the contact form below
       </h3>
+      <Form />
     </section>
   );
 };
