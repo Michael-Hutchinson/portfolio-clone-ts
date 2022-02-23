@@ -35,7 +35,7 @@ const Form: React.FunctionComponent = () => {
     successMessage = `There was a problem sending your email!`;
   }
   return (
-    <Contact className="contact-form" onSubmit={(e) => sendEmail(e)}>
+    <Contact className="contact-form" onSubmit={sendEmail}>
       <Fields>
         <InputFields type="text" name="name" placeholder="Name" required />
         <InputFields type="email" name="email" placeholder="Email" required />
