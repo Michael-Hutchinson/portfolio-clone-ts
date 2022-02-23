@@ -1,12 +1,14 @@
 import React from 'react';
 
 import Social from '../shared/Social/Social';
+import { Bottom } from './Footer.styles';
 
 const Footer: React.FunctionComponent = () => {
   return (
-    <div>
+    <Bottom>
+      <p>Copyright © Michael Hutchinson | 2022</p>
       <Social />
-    </div>
+    </Bottom>
   );
 };
 
