@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Contact, Fields, InputFields, MessageBox, SendButton } from './Form.styles';
 
 const Form: React.FunctionComponent = () => {
-  const [sent, setSent] = useState<boolean>();
+  const [sent, setSent] = useState<boolean | null>(null);
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     const target = e.target as HTMLFormElement;
     e.preventDefault();
