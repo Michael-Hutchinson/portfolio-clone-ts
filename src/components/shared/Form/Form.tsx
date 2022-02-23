@@ -3,6 +3,11 @@ import React, { useState } from 'react';
 
 import { Contact, Fields, InputFields, MessageBox, SendButton } from './Form.styles';
 
+enum Messages {
+  sent = 'The email was sent sucessfully!',
+  failed = 'There was a problem sending your email!',
+}
+
 const Form: React.FunctionComponent = () => {
   const [sent, setSent] = useState<boolean | null>(null);
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
@@ -30,9 +35,9 @@ const Form: React.FunctionComponent = () => {
   let successMessage = '';
 
   if (sent) {
-    successMessage = `The email was sent sucessfully!`;
+    successMessage = Messages.sent;
   } else if (sent === false) {
-    successMessage = `There was a problem sending your email!`;
+    successMessage = Messages.failed;
   }
   return (
     <Contact className="contact-form" onSubmit={sendEmail}>
