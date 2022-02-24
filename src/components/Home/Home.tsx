@@ -8,7 +8,7 @@ const Home: React.FunctionComponent = () => {
     <section id="home">
       <Name>Hi, my name is</Name>
       <Title>Michael Hutchinson.</Title>
-      <SubTitle>I like to code things for the web.</SubTitle>
+      <SubTitle>I like to &lt;code&gt; things for the web.</SubTitle>
       <Text>A design-minded front-end web developer based in Manchester.</Text>
       <Button links="#about" buttonText="Learn more" />
     </section>
