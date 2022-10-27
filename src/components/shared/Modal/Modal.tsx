@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
 import { ModalButton, ModalImage, ModalOpen, Wrapper } from './Modal.styles';
 
@@ -8,7 +8,7 @@ interface IModalProps {
   toggleModal: (e: React.MouseEvent<HTMLInputElement>) => void;
 }
 
-const Modal: React.FunctionComponent<IModalProps> = ({ alt, image, toggleModal }) => {
+const Modal = ({ alt, image, toggleModal }: IModalProps): ReactElement => {
   return (
     <Wrapper>
       <ModalOpen>
