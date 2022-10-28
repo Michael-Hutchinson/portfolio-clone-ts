@@ -26,7 +26,7 @@ const Work: React.FunctionComponent = () => {
             onClick={toggleModal}
             key={img[0]}
             src={img[0]}
-            alt={img[2]}
+            alt={img[1]}
           />
         ))}
       </ImageWrap>

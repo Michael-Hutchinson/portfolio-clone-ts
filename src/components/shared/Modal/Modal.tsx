@@ -1,5 +1,6 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useEffect, useState } from 'react';
 
+import images from '../../../images';
 import { ModalButton, ModalImage, ModalOpen, Wrapper } from './Modal.styles';
 
 interface IModalProps {
@@ -8,7 +9,15 @@ interface IModalProps {
   toggleModal: (e: React.MouseEvent<HTMLInputElement>) => void;
 }
 
-const Modal = ({ alt, image, toggleModal }: IModalProps): ReactElement => {
+const Modal = ({ alt, toggleModal }: IModalProps): ReactElement => {
+  const [image, setImage] = useState<string>();
+  useEffect(() => {
+    images.forEach((img) => {
+      if (alt === img[1]) {
+        setImage(img[2]);
+      }
+    });
+  }, [toggleModal, alt]);
   return (
     <Wrapper>
       <ModalOpen>
