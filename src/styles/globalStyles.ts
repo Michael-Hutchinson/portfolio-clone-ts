@@ -7,6 +7,7 @@ declare module 'styled-components' {
     title: string;
     link: string;
     shadow: string;
+    icon: string;
   }
 }
 
