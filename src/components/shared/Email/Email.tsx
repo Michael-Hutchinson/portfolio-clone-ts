@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
 import { Wrapper } from './Email.styles';
 
-const Email: React.FunctionComponent = () => {
+const Email = (): ReactElement => {
   return (
     <Wrapper>
       <a href="mailto:michael-hutchinson@hotmail.co.uk">
