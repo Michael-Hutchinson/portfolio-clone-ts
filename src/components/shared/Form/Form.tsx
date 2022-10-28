@@ -1,14 +1,10 @@
 import emailjs from 'emailjs-com';
-import React, { useState } from 'react';
+import React, { ReactElement, useState } from 'react';
 
+import config from '../../../data/config';
 import { Contact, Fields, InputFields, MessageBox, SendButton } from './Form.styles';
 
-enum Messages {
-  sent = 'The email was sent sucessfully!',
-  failed = 'There was a problem sending your email!',
-}
-
-const Form: React.FunctionComponent = () => {
+const Form = (): ReactElement => {
   const [sent, setSent] = useState<boolean | null>(null);
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     const target = e.target as HTMLFormElement;
@@ -35,10 +31,11 @@ const Form: React.FunctionComponent = () => {
   let successMessage = '';
 
   if (sent) {
-    successMessage = Messages.sent;
+    successMessage = `${config.contactForm.successMessage}`;
   } else if (sent === false) {
-    successMessage = Messages.failed;
+    successMessage = `${config.contactForm.errorMessage}`;
   }
+
   return (
     <Contact className="contact-form" onSubmit={sendEmail}>
       <Fields>
