@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const Cta = styled.a`
   background-color: transparent;
-  border: 0.063rem solid var(--gold);
+  border: 0.063rem solid ${({ theme }) => theme.link};
   border-radius: 0.25rem;
-  color: var(--gold);
+  color: ${({ theme }) => theme.link};
   cursor: pointer;
   display: inline-flex;
   font-family: var(--font-sans);
@@ -16,6 +16,6 @@ export const Cta = styled.a`
   text-transform: uppercase;
   transition: all ease-in-out 0.2s;
   :hover {
-    background-color: var(--gold-shadow);
+    background-color: ${({ theme }) => theme.shadow};
   }
 `;
