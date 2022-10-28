@@ -4,7 +4,7 @@ interface SectionType {
   h1?: string;
   h2?: string;
   h3?: string;
-  p?: string | string[];
+  p?: string[];
   url?: string;
   nav?: string;
   list?: string[];
@@ -42,7 +42,7 @@ const config: IConfigProps = {
       title: 'Hi, my name is',
       h1: 'Michael Hutchinson.',
       h2: 'I like to <code> things for the web.',
-      p: 'A design-minded front-end web developer based in Manchester.',
+      p: ['A design-minded front-end web developer based in Manchester.'],
       url: '/#home',
       nav: 'Home',
     },
@@ -81,7 +81,7 @@ const config: IConfigProps = {
       nav: 'Contact',
     },
     footer: {
-      p: 'Copyright © Michael Hutchinson | 2022',
+      p: ['Copyright © Michael Hutchinson | 2022'],
     },
   },
   socialMedia: {
