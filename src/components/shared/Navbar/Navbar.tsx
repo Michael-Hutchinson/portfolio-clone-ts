@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { FaBars } from 'react-icons/fa';
 
 import cv from '../../../images/cv.jpeg';
 import Button from '../Button/Button';
+import Toggle from '../Toggle/Toggle';
 import { Input, Label, Links, MobileLinks, Nav } from './Navbar.styles';
 
-const Navbar: React.FunctionComponent = () => {
+const Navbar = (): ReactElement => {
   return (
     <Nav>
       <Input id="nav-responsive" />
       <div>
-        <p>Hello</p>
+        <Toggle />
       </div>
       <div>
         <Label htmlFor="nav-responsive">
