@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { ReactElement, useEffect, useState } from 'react';
 
 import Navbar from '../shared/Navbar/Navbar';
 import { Top } from './Header.styles';
 
-const Header: React.FunctionComponent = () => {
+const Header = (): ReactElement => {
   const navClass = [];
   const [scroll, setScroll] = useState(false);
 
