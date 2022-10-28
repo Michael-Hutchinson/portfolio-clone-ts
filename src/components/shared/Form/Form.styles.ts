@@ -17,9 +17,9 @@ export const Fields = styled.div`
 
 export const InputFields = styled.input`
   background: transparent;
-  border: 0.063rem solid var(--gold);
+  border: 0.063rem solid ${({ theme }) => theme.link};
   border-radius: 0.25rem;
-  color: var(--gold);
+  color: ${({ theme }) => theme.link};
   font-size: 0.75rem;
   height: 3.125rem;
   margin-bottom: 0.625rem;
@@ -27,7 +27,7 @@ export const InputFields = styled.input`
   width: 100%;
   :focus {
     outline: 0;
-    background-color: var(--gold-shadow);
+    background-color: ${({ theme }) => theme.shadow};
   }
 `;
 
@@ -40,9 +40,9 @@ export const MessageBox = styled(InputFields).attrs({
 
 export const SendButton = styled.input`
   background-color: transparent;
-  border: 0.063rem solid var(--gold);
+  border: 0.063rem solid ${({ theme }) => theme.link};
   border-radius: 0.25rem;
-  color: var(--gold);
+  color: ${({ theme }) => theme.link};
   cursor: pointer;
   display: flex;
   font-family: var(--font-sans);
@@ -55,6 +55,6 @@ export const SendButton = styled.input`
   text-transform: uppercase;
   transition: all ease-in-out 0.2s;
   :hover {
-    background-color: var(--gold-shadow);
+    background-color: ${({ theme }) => theme.shadow};
   }
 `;
