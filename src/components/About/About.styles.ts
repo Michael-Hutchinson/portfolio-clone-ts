@@ -23,7 +23,7 @@ export const ListItems = styled.ul`
     font-family: var(--font-mono);
     font-size: 0.813rem;
     &:before {
-      color: var(--gold);
+      color: ${({ theme }) => theme.link};
       content: '▹';
       left: 0;
       position: absolute;
