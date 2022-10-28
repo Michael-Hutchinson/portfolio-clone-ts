@@ -19,7 +19,7 @@ export const Icon = styled.ul`
   margin: 0;
   padding: 0;
   &:after {
-    background-color: var(--light-slate);
+    background-color: ${({ theme }) => theme.text};
     content: '';
     height: 6.25rem;
     width: 0.063rem;
@@ -29,7 +29,7 @@ export const Icon = styled.ul`
       margin-bottom: 1.25rem;
     }
     a {
-      color: var(--gold);
+      color: ${({ theme }) => theme.link};
       display: flex;
       padding: 0.625rem;
       transition: all ease-in-out 0.4s;
