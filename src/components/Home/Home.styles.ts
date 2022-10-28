@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Name = styled.h5`
-  color: var(--gold);
+  color: ${({ theme }) => theme.link};
   font-family: var(--font-mono);
   margin: 0 0 0 0.25rem;
   font-size: 0.875rem;
@@ -14,7 +14,7 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h2`
-  color: var(--light-slate);
+  color: ${({ theme }) => theme.text};
   font-size: clamp(2.5rem, 6vw, 4rem);
   margin: 0;
 `;
