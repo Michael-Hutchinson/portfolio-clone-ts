@@ -16,7 +16,7 @@ export const MobileLinks = styled.div`
     counter-increment: item 1;
     padding: 0.625rem;
     :hover {
-      color: var(--gold);
+      color: ${({ theme }) => theme.link};
     }
     &:last-of-type {
       :before {
@@ -27,14 +27,14 @@ export const MobileLinks = styled.div`
   :before {
     content: "0" counter(item) ".";
     margin-right: 0.313rem;
-    color: var(--gold);
+    color: ${({ theme }) => theme.link};
     text-align: right;
     font-family: var(--font-mono);
 }
   }
   }
   @media (max-width: 48rem) {
-    background-color: var(--navy);
+    background-color: ${({ theme }) => theme.background};
     flex-direction: column;
     overflow-y: auto;
     position: absolute;
