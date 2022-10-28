@@ -1,24 +1,28 @@
-import React, { ReactElement, useEffect, useState } from 'react';
+import React, { ReactElement, useContext, useEffect, useState } from 'react';
 import { FiMoon, FiSun } from 'react-icons/fi';
 import Switch from 'react-switch';
+import { ThemeContext } from 'utils/context';
 
-import Darkmode from '../Darkmode/Darkmode';
 import { DarkIcon, LightIcon } from './Toggle.styles';
 
-const Toggle = (toggleTheme: () => void): ReactElement => {
-  const [themeToggler] = Darkmode();
+const Toggle = (): ReactElement => {
+  const themeState = useContext(ThemeContext);
   const [checked, setChecked] = useState(false);
+  const handleChange = (nextChecked: boolean) => {
+    setChecked(nextChecked);
+    if (nextChecked) {
+      themeState.setTheme('dark');
+    } else {
+      themeState.setTheme('light');
+    }
+  };
   useEffect(() => {
-    if (themeToggler === 'light') {
+    if (themeState.theme === 'light') {
       setChecked(false);
     } else {
       setChecked(true);
     }
-  }, [themeToggler]);
-  const handleChange = (nextChecked: boolean) => {
-    setChecked(nextChecked);
-    toggleTheme();
-  };
+  }, [themeState.theme]);
   return (
     <Switch
       onChange={handleChange}
