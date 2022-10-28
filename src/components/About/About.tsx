@@ -13,11 +13,11 @@ const About = (): ReactElement => {
       <Title titleText={config.sections.about.title} />
       <Wrap>
         <div>
-          {aboutWording.map((p) => (
+          {aboutWording?.map((p) => (
             <p key={p}>{p}</p>
           ))}
           <ListItems>
-            {techList.map((list) => (
+            {techList?.map((list) => (
               <li key={list}>{list}</li>
             ))}
           </ListItems>
