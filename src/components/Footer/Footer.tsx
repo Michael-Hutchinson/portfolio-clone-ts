@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
+import config from '../../data/config';
 import Social from '../shared/Social/Social';
 import { Bottom } from './Footer.styles';
 
-const Footer: React.FunctionComponent = () => {
+const Footer = (): ReactElement => {
   return (
     <Bottom>
-      <p>Copyright © Michael Hutchinson | 2022</p>
+      <p>{config.sections.footer.p}</p>
       <Social />
     </Bottom>
   );
