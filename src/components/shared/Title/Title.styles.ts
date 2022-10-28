@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const SubTitle = styled.h2`
   align-items: center;
-  color: var(--gold);
+  color: ${({ theme }) => theme.link};
   display: flex;
   font-size: clamp(1.625rem, 5vw, 2rem);
   font-family: var(--font-mono);
@@ -15,7 +15,7 @@ export const SubTitle = styled.h2`
     width: 12.5rem;
     height: 0.063rem;
     margin-left: 1.25rem;
-    background-color: var(--light-slate);
+    background-color: ${({ theme }) => theme.text};
     @media (max-width: 48rem) {
       width: 100%;
     }
