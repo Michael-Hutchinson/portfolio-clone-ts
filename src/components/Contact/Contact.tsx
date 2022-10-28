@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
 import Form from '../../components/shared/Form/Form';
+import config from '../../data/config';
 import Title from '../shared/Title/Title';
 
-const Contact: React.FunctionComponent = () => {
+const Contact = (): ReactElement => {
   return (
     <section id="contact">
-      <Title titleText="Get in touch" />
-      <h3>
-        If you have any questions or want to know more, please use the contact form below
-      </h3>
+      <Title titleText={config.sections.contact.title} />
+      <h3>{config.sections.contact.h3}</h3>
       <Form />
     </section>
   );
