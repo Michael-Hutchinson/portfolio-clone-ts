@@ -1,5 +1,7 @@
-import GlobalStyle from 'App.styles';
-import React from 'react';
+import React, { ReactElement } from 'react';
+import { useContext } from 'react';
+import { ThemeProvider } from 'styled-components';
+import { ThemeContext } from 'utils/context';
 
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
@@ -8,10 +10,14 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Email from './components/shared/Email/Email';
 import Work from './components/Work/Work';
+import GlobalStyle from './styles/globalStyles';
+import { darkTheme, lightTheme } from './styles/theme';
 
-const App: React.FunctionComponent = () => {
+const App = (): ReactElement => {
+  const themeState = useContext(ThemeContext);
+  const themeMode = themeState.theme === 'light' ? lightTheme : darkTheme;
   return (
-    <div className="App">
+    <ThemeProvider theme={themeMode}>
       <GlobalStyle />
       <Header />
       <main>
@@ -22,7 +28,7 @@ const App: React.FunctionComponent = () => {
         <Contact />
         <Footer />
       </main>
-    </div>
+    </ThemeProvider>
   );
 };
 
