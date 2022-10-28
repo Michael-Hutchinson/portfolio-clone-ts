@@ -1,12 +1,12 @@
 import Modal from 'components/shared/Modal/Modal';
-import React, { useState } from 'react';
+import React, { ReactElement, useState } from 'react';
 
-import config from '../../data/config.json';
+import config from '../../data/config';
 import images from '../../images';
 import Title from '../shared/Title/Title';
 import { ImageWrap } from './Work.styles';
 
-const Work: React.FunctionComponent = () => {
+const Work = (): ReactElement => {
   const [modal, setModal] = useState<boolean>(false);
   const [image, setImage] = useState<string>('');
   const toggleModal = (e: React.MouseEvent<HTMLInputElement>) => {
