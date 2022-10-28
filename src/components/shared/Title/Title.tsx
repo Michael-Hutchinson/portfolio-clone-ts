@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
 import { SubTitle } from './Title.styles';
 
 interface ITitleProps {
-  titleText: string;
+  titleText?: string;
 }
 
-const Title: React.FunctionComponent<ITitleProps> = ({ titleText }) => {
+const Title = ({ titleText }: ITitleProps): ReactElement => {
   return <SubTitle>{titleText}</SubTitle>;
 };
 
