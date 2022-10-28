@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 
-import config from '../../../data/config.json';
+import config from '../../../data/config';
 import { Icon, Wrapper } from './Social.styles';
 
 const Social = (): ReactElement => {
