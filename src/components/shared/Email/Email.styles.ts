@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   right: 1.25rem;
   z-index: 10;
   &:after {
-    background-color: var(--light-slate);
+    background-color: ${({ theme }) => theme.text};
     content: '';
     height: 6.25rem;
     width: 0.063rem;
