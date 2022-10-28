@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 
-import config from '../../data/config.json';
+import config from '../../data/config';
 import Button from '../shared/Button/Button';
 import { Name, SubTitle, Text, Title } from './Home.styles';
 

@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 
-import config from '../../data/config.json';
+import config from '../../data/config';
 import logo from '../../images/me.png';
 import Title from '../shared/Title/Title';
 import { ListItems, Logo, Wrap } from './About.styles';
