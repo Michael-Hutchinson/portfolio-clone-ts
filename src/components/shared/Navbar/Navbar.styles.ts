@@ -65,16 +65,16 @@ export const Label = styled.label`
       @media (max-width: 48rem) {
         cursor: pointer;
         display: block;
-        color: var(--slate);
+        color: ${({ theme }) => theme.title};
       }
     }
   }
 `;
 
 export const Links = styled.a`
-  color: var(--slate);
+  color: ${({ theme }) => theme.title};
   font-size: 0.875rem;
   &:hover {
-    color: var(--slate);
+    color: ${({ theme }) => theme.title};
   }
 `;
