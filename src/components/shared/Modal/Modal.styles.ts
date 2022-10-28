@@ -25,9 +25,9 @@ export const ModalImage = styled.img`
 
 export const ModalButton = styled.input`
   background-color: transparent;
-  border: 0.063rem solid var(--gold);
+  border: 0.063rem solid ${({ theme }) => theme.link};
   border-radius: 0.25rem;
-  color: var(--gold);
+  color: ${({ theme }) => theme.link};
   cursor: pointer;
   display: flex;
   font-family: var(--font-sans);
@@ -41,6 +41,6 @@ export const ModalButton = styled.input`
   transition: all ease-in-out 0.2s;
   text-align: center;
   :hover {
-    background-color: var(--gold-shadow);
+    background-color: ${({ theme }) => theme.shadow};
   }
 `;
