@@ -33,7 +33,7 @@ export const ListItems = styled.ul`
 
 export const Logo = styled.img`
   width: 100%;
-  border: 0.063rem solid var(--gold);
+  border: 0.063rem solid ${({ theme }) => theme.link};
   border-radius: 0.25rem;
   padding: 0.313rem;
 `;
