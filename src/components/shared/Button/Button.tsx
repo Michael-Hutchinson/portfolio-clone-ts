@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
 import { Cta } from './Button.styles';
 
@@ -7,7 +7,7 @@ interface IButtonProps {
   links: string;
 }
 
-const Button: React.FunctionComponent<IButtonProps> = ({ buttonText, links }) => {
+const Button = ({ buttonText, links }: IButtonProps): ReactElement => {
   return <Cta href={links}>{buttonText}</Cta>;
 };
 
