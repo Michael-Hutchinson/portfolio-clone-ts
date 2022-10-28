@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import { FaBars } from 'react-icons/fa';
 
+import config from '../../../data/config';
 import cv from '../../../images/cv.jpeg';
 import Button from '../Button/Button';
 import Toggle from '../Toggle/Toggle';
@@ -19,10 +20,13 @@ const Navbar = (): ReactElement => {
         </Label>
       </div>
       <MobileLinks>
-        <Links href="#home">Home</Links>
-        <Links href="#about">About me</Links>
-        <Links href="#work">My work</Links>
-        <Links href="#contact">Contact</Links>
+        {Object.values(config.sections).map((link) =>
+          link.url ? (
+            <Links key={link.id} href={link.url}>
+              {link.nav}
+            </Links>
+          ) : null,
+        )}
         <Button links={cv} buttonText="Download My CV" />
       </MobileLinks>
     </Nav>
